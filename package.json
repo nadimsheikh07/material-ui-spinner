@@ -1,10 +1,23 @@
 {
   "name": "material-ui-spinner",
   "version": "1.0.0",
-  "description": "",
-  "author": "https://github.com/nadimsheikh07/material-ui-loader",
+  "description": "material-ui spinner",
+  "keywords": [
+    "react",
+    "redux",
+    "material",
+    "material-design",
+    "material-ui",
+    "mui",
+    "spinner",
+    "material-ui-spinner"
+  ],
+  "author": "nadim sheikh (nadim.sheikh.07@gmail.com)",
   "license": "MIT",
-  "repository": "https://github.com/nadimsheikh07/material-ui-loader/material-ui-spinner",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nadimsheikh07/material-ui-spinner.git"
+  },
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
