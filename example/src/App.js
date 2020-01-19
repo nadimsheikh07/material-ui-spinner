@@ -1,13 +1,70 @@
-import React, { Component } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
+import Button from '@material-ui/core/Button'
+import Typography from '@material-ui/core/Typography'
+import { withStyles } from '@material-ui/core/styles'
 
-import ExampleComponent from 'material-ui-spinner'
+import { withSpinner } from 'material-ui-spinner'
 
-export default class App extends Component {
-  render () {
+
+const styles = theme => ({
+  root: {
+    textAlign: 'center',
+    paddingTop: theme.spacing(20)
+  },
+  button: {
+    margin: theme.spacing(1),
+  },
+
+})
+
+class App extends React.Component {
+
+  handleClick = (variant) => {
+    const { spinner } = this.props
+    const options = {
+      message: variant,
+      action: false,
+      handleAction: () => {/* do something... */ },
+      close: true,
+      variant: variant,
+    }
+    spinner.show(options)
+  }
+
+  render() {
+    const { classes } = this.props
     return (
-      <div>
-        <ExampleComponent text='Modern React component module' />
+      <div className={classes.root}>
+
+
+        <Typography variant="h1" component="h1">
+          Material-UI Toast Redux
+        </Typography>
+
+        <Typography variant="h4" component="h4">
+          Toast component using Material-UI with Redux integration
+        </Typography>
+
+        <Button variant="contained" color="primary" className={classes.button} onClick={() => { this.handleClick('success') }}>
+          Open Success Toast
+        </Button>
+        <Button variant="contained" color="secondary" className={classes.button} onClick={() => { this.handleClick('error') }}>
+          Open Error Toast
+        </Button>
+        <Button variant="contained" color="primary" className={classes.button} onClick={() => { this.handleClick('warning') }}>
+          Open Warning Toast
+        </Button>
+        <Button variant="contained" color="secondary" className={classes.button} onClick={() => { this.handleClick('info') }}>
+          Open info Toast
+        </Button>
       </div>
     )
   }
 }
+
+App.propTypes = {
+  classes: PropTypes.object.isRequired
+}
+
+export default withSpinner()(withStyles(styles)(App))
