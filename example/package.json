@@ -1,0 +1,20 @@
+{
+  "name": "material-ui-spinner-example",
+  "homepage": "https://https://github.com/nadimsheikh07/material-ui-loader.github.io/material-ui-spinner",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "prop-types": "^15.6.2",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts": "^1.1.4",
+    "material-ui-spinner": "file:.."
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
